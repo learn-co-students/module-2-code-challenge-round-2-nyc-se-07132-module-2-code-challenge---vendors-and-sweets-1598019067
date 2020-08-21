@@ -1,0 +1,13 @@
+<h1> Sweet Name</h1>
+<p>Name:<%=@sweet.name%></p>
+
+
+<h1>Vendor List</h1>
+<% @sweet.vendors.each do |vendor|%>
+    <p><%=link_to vendor.name, vendor%></p>
+<%end%>
+
+
+
+
+
