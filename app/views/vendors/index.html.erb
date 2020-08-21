@@ -1,7 +1,6 @@
-<h1>All Vendors</h1>
+<h1>Vendor Index Page</h1>
 
-<ul>
-  <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
-  <% end  %>
-</ul>
+<label> Vendors: </label>
+<%@vendors.each do |vendor| %>
+<%= link_to vendor.name, vendor_path(vendor)%><br>
+<%end%>

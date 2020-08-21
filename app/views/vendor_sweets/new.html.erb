@@ -1,0 +1,22 @@
+<h1>VendorSweet New Page:</h1>
+
+    <%if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+    <%=error%>
+    <%end%>
+    <%end%>
+
+
+<%= form_for @vendor_sweet do |f|%>
+
+<%=f.label :sweet%>
+<%=f.collection_select :sweet_id, @sweets, :id, :name%>
+
+<%=f.label :vendor%>
+<%=f.collection_select :vendor_id, @vendors, :id, :name%>
+
+<%=f.label :price%>
+<%=f.number_field :price, step: 0.01 %>
+
+<%=f.submit%>
+<%end%>
