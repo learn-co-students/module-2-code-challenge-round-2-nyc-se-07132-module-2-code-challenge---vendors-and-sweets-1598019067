@@ -3,5 +3,5 @@
 
 <%= @sweet.name %><br><br>
 <% @sweet.vendors.uniq.each do |vendor| %>
-<%= link_to vendor.name, vendor_path(vendor) %>
+<%= link_to vendor.name, vendor_path(vendor) %><br><br>
 <% end %>
