@@ -1,6 +1,7 @@
 <h1> Vendor Show Page </h1>
 
-<%= @vendor.name %><br><br>
+<h2><%= @vendor.name %></h2><br>
+<h3><%= "Types of cookies:"%></h3><br>
 <% @vendor.sweets.uniq.each do |sweet| %>
 <%= link_to sweet.name, sweet_path(sweet) %><br><br>
 <% end %>

@@ -1,7 +1,8 @@
 <h1> Sweet's Show Page </h1>
 
 
-<%= @sweet.name %><br><br>
+<h2><%= @sweet.name %></h2><br><br>
+<h3><%= "Vendors:"%><br></h3>
 <% @sweet.vendors.uniq.each do |vendor| %>
 <%= link_to vendor.name, vendor_path(vendor) %><br><br>
 <% end %>
