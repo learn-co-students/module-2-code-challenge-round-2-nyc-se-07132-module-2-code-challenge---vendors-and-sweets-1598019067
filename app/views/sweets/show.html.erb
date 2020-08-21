@@ -1,0 +1,11 @@
+<h1>Sweet Show Page</h1>
+
+<p><%=@sweet.name%></p>
+
+<p>List of vendors:</p>
+
+<p><%@sweet.vendors.each do |vendor|%></p>
+    <p><%=link_to vendor.name, vendor_path%></p>
+<%end%>
+
+

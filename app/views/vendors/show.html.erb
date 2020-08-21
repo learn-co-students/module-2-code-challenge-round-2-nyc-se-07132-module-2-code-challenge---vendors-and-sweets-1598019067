@@ -1,0 +1,11 @@
+<h1>Vendor Show Page</h1>
+Vendor name:
+<p><%=@vendor.name%></p>
+
+<p><%@vendor.sweets.each do |sweet|%></p>
+    <p><%=link_to sweet.name, sweet_path %></p>
+<%end%>
+
+
+<%sweet_prices = @vendor.vendor_sweets.map{|sweet|sweet.price}%>
+<p>Average for All sweets <%=sweet_prices.sum/(sweet_prices.size)%></p>
